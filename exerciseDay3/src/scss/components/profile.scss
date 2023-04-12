@@ -1,11 +1,46 @@
 @use "../base/variables" as *;
 
-.btn {
-    color: $primary;
-}
+$profile-title-fs: 1.0625rem;
+$container-width: 500px;
 
 .container {
-    width: 100px;
-    height: 100px;
-    background-image: url("./assets/images/pic_blogroll.png");
+    width: $container-width;
+    border: 1px solid $border-color;
+    margin: 8px auto;
+}
+
+.profile {
+    width: 100%;
+    &__title {
+        font-size: 1.0625rem;
+        margin-left: 3px;
+        line-height: 10px;
+        box-shadow: 0 4px 7px #d0d0d0 inset;
+        letter-spacing: 1px;
+        margin-top: 8px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        padding: 10px 0;
+    }
+
+    &__avt {
+        width: 110px;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__detail {
+        flex: 1;
+        overflow: scroll;
+        &--item p {
+            font-size: 15px;
+            line-height: 13px;
+            letter-spacing: -0.6px;
+        }
+    }
 }

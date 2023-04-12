@@ -1,0 +1,45 @@
+@use "../base/variables" as *;
+
+.posts {
+    margin-top: 64px;
+    padding-left: 1px;
+
+    &__item {
+        list-style: none;
+
+        &--background {
+            padding: 7px 19px 6px;
+            background-color: $bg-paper;
+            position: relative;
+            p {
+                font-size: 14px;
+                letter-spacing: -1px;
+                word-spacing: 4px;
+            }
+
+            .arrow {
+                position: absolute;
+                bottom: -10px;
+                left: 19px;
+                border-bottom: 0px solid;
+                border-left: 14px solid transparent;
+                border-right: 14px solid transparent;
+                border-top: 14px solid $bg-paper;
+                width: 0px;
+                height: 0px;
+            }
+        }
+
+        &--time {
+            margin-left: 51px;
+            line-height: 14px;
+            font-size: 14px;
+            letter-spacing: -0.7px;
+            word-spacing: 0.2px;
+
+            a {
+                color: $link-color;
+            }
+        }
+    }
+}

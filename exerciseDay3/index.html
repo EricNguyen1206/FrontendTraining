@@ -10,12 +10,147 @@
         />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <title>Bai 3</title>
+        <!--==================== CSS ====================-->
         <link rel="stylesheet" href="dist/styles.css" />
     </head>
-    <body>
-        <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-secondary">Secondary</button>
 
-        <div class="container"></div>
+    <body>
+        <main class="container">
+            <!--==================== profile ====================-->
+            <section class="profile">
+                <h2 class="profile__title">Player Profile</h2>
+                <div class="profile__wrapper">
+                    <div class="profile__avt">
+                        <img
+                            src="./dist/assets/images/pic_avt.png"
+                            alt="avatar"
+                            class=""
+                        />
+                    </div>
+                    <ul class="profile__detail">
+                        <li class="profile__detail--item">
+                            <p>Nơi sinh: Hà Nội</p>
+                        </li>
+                        <li class="profile__detail--item">
+                            <p>Ngay sinh: 28/11/1990</p>
+                        </li>
+                        <li class="profile__detail--item">
+                            <p>Vị trí: Teamlear</p>
+                        </li>
+                        <li class="profile__detail--item">
+                            <p>Cao: 170cm</p>
+                        </li>
+                        <li class="profile__detail--item">
+                            <p>Nặng: 67kg</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--==================== facts ====================-->
+            <section class="facts">
+                <h2 class="facts__title">Facts</h2>
+                <ul class="facts__list">
+                    <li class="facts__item">
+                        <p class="facts__item--text">
+                            <i class="fas fa-star"></i>Nam gia nhap The Cong nam
+                            1999
+                        </p>
+                    </li>
+                    <li class="facts__item">
+                        <p class="facts__item--text">
+                            <i class="fas fa-star"></i>Trong suot thoi trai tre
+                            gia nhap The Cong Nam da ghi duoc 160 ban thang
+                            trong vong 7 nam
+                        </p>
+                    </li>
+                    <li class="facts__item">
+                        <p class="facts__item--text">
+                            <i class="fas fa-star"></i>Nam choi tran dau tien
+                            cho U21 Viet Nam vao do tuoi 16
+                        </p>
+                    </li>
+                    <li class="facts__item">
+                        <p class="facts__item--text">
+                            <i class="fas fa-star"></i>Nam da dat cup U21 cho
+                            Viet Nam vao nam 2007
+                        </p>
+                    </li>
+                    <li class="facts__item">
+                        <p class="facts__item--text">
+                            <i class="fas fa-star"></i>Nam da dat duoc cup cau
+                            thu xuat sac nhat trong nam
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!--==================== profile ====================-->
+            <ul class="posts">
+                <li class="posts__item">
+                    <div class="posts__item--background">
+                        <p>Nam choi cho cau lac bo The Cong</p>
+                        <p>The Cong dat chuc vo dich</p>
+                        <div class="arrow"></div>
+                    </div>
+                    <p class="posts__item--time">
+                        Post by <a>The Cong’s Fan</a> 20/12/2007
+                    </p>
+                </li>
+                <li class="posts__item">
+                    <div class="posts__item--background">
+                        <p>Nam la cau thu choi rat hay o The Cong</p>
+                        <p>va anh da chuyen toi Hoa Phat <>:)</p>
+                        <div class="arrow"></div>
+                    </div>
+
+                    <p class="posts__item--time">
+                        Post by <a>Hoa Phat’s Fan</a> 20/12/2007
+                    </p>
+                </li>
+            </ul>
+
+            <!--==================== profile ====================-->
+            <section class="contact">
+                <h2 class="contact__title">Your comment</h2>
+                <form class="contact__form">
+                    <div class="contact__form--item">
+                        <label for="name"> Your name </label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder=""
+                        />
+                    </div>
+                    <div class="contact__form--item">
+                        <label for="name"> Your email (will not public) </label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder=""
+                            placeholder=""
+                        />
+                    </div>
+                    <div class="contact__form--item">
+                        <label for="name"> Comment </label>
+                        <textarea
+                            name="name"
+                            id="name"
+                            placeholder="Your comment hear"
+                        >
+                        Your comment here
+                        </textarea>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!--==================== Fontawesome Icons ====================-->
+        <script
+            src="https://kit.fontawesome.com/18e1a5fca9.js"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>

@@ -1,0 +1,43 @@
+@use "../base/variables" as *;
+
+.contact {
+    margin-top: 28px;
+    margin-bottom: 10px;
+    &__title {
+        text-align: center;
+        font-size: 17px;
+        line-height: 10px;
+        margin-left: 10px;
+        letter-spacing: 1px;
+        word-spacing: 0px;
+    }
+
+    &__form {
+        margin-top: 4px;
+        &--item {
+            display: flex;
+            align-items: center;
+            label {
+                display: block;
+                width: 110px;
+                padding-left: 4px;
+                line-height: 21px;
+                font-size: 14px;
+                letter-spacing: 0.2px;
+            }
+
+            input {
+                width: 148px;
+                height: 22px;
+                border: 1px solid $border-color;
+            }
+
+            textarea {
+                width: 384px;
+                height: 84px;
+                border: 1px solid $border-color;
+                font-size: 12px;
+            }
+        }
+    }
+}
