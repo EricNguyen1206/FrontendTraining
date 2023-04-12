@@ -1,0 +1,19 @@
+{
+    "scripts": {
+        "dev": "gulp --development",
+        "build": "gulp build --production"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.29.1",
+        "del": "^7.0.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-csso": "^4.0.1",
+        "gulp-images": "^0.0.3",
+        "gulp-mode": "^1.1.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "sass": "^1.62.0"
+    }
+}
