@@ -66,8 +66,8 @@ body {
 }
 
 .container {
-    width: 100%;
-    padding: 0 166px;
+    width: 700px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     gap: 28px;
@@ -89,13 +89,16 @@ body {
 
 .title {
     font-size: 12px;
-    margin-top: 36px;
+    margin-top: 33px;
     margin-left: 20px;
+    word-spacing: -0.2px;
+    letter-spacing: -0.2px;
+    line-height: 20px;
     color: var(--text-secondary);
 }
 
 .section-1__acticle {
-    margin-top: 36px;
+    margin-top: 30px;
 }
 
 .section-1__acticle {
@@ -105,8 +108,9 @@ body {
 
 .section-1__image {
     width: 146px;
-    min-height: 146px;
-    margin-left: 20px;
+    min-height: 140px;
+    margin-left: 21px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -121,66 +125,84 @@ body {
 .section-1__image p {
     display: block;
     font-size: 12px;
+    line-height: 10px;
     color: var(--text-secondary);
 }
 
 .section-1__content--title {
     font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    font-weight: normal;
 }
 
 .section-1__content--description {
-    margin-top: 14px;
+    margin-top: 8px;
     font-size: 12px;
     line-height: 10px;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.6px;
+    word-spacing: 1.8px;
     color: var(--text-secondary);
 }
 
 .section-1__info--script {
     font-size: 12px;
-    padding-bottom: 16px;
+    line-height: 10px;
+    padding-bottom: 15px;
+    letter-spacing: -0.4px;
+    word-spacing: 1px;
+    padding-top: 4px;
     margin-left: 36px;
     color: var(--text-secondary);
     border-bottom: 1px dotted var(--text-secondary);
 }
 
 .section-1__info--action {
-    margin-top: 16px;
-    margin-left: 36px;
+    margin-top: 14px;
+    margin-left: 37px;
 }
 
 .info-action {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-size: 12px;
+    letter-spacing: -0.5px;
+    word-spacing: 1px;
+    line-height: 10px;
     text-decoration: none;
     color: var(--text-primary);
 }
 
 .section-2 {
-    margin-top: 88px;
+    margin-top: 87px;
     margin-left: 36px;
 }
 
 .section-2__title {
     font-size: 12px;
+    line-height: 10px;
+    letter-spacing: -0.4px;
+    word-spacing: 1px;
     font-weight: normal;
 }
 
 .section-2__subtitle,
 .section-2__list {
+    margin-top: 4px;
     font-size: 12px;
+    line-height: 10px;
+    letter-spacing: -0.5px;
+    word-spacing: 1.4px;
     color: var(--text-secondary);
 }
 
 .section-2__listwraper {
+    margin-top: 12px;
+    padding-bottom: 13px;
+    border-bottom: 1px dotted var(--text-secondary);
     display: flex;
-    margin-top: 8px;
-}
-
-.section-2__list {
-    flex: 1;
+    gap: 2px;
 }
 
 .section-2__list--item {
@@ -197,17 +219,8 @@ body {
     text-decoration: underline;
 }
 
-p.devider {
-    height: 0;
-    display: block;
-    margin-top: 20px;
-    border-top: 1px dotted var(--text-secondary);
-    color: transparent;
-    background-color: transparent;
-}
-
 .section-1__action {
-    margin-top: 14px;
+    margin-top: 15px;
 }
 
 .aside__wrapper {
@@ -218,32 +231,43 @@ p.devider {
 .aside__wrapper p.aside__devider {
     width: 100%;
     display: block;
-    border-top: 1px solid var(--text-secondary);
+    border-top: 1px solid #353439;
 }
 
 .aside__image {
     height: 96px;
     object-fit: contain;
     display: block;
-    margin: 30px auto 24px;
+    margin: 28px auto 22px;
 }
 
-.asside__content--title {
+.aside__content {
+    padding-left: 12px;
+}
+
+.aside__content--title {
     font-size: 12px;
     line-height: 10px;
     font-weight: 300;
+    word-spacing: 1.6px;
+    letter-spacing: -0.5px;
 }
 
-.asside__content--description1 {
+.aside__content--description1 {
+    margin-top: 9px;
     font-size: 12px;
-    line-height: 10px;
+    line-height: 11px;
+    letter-spacing: -0.5px;
+    word-spacing: 1px;
     color: var(--text-secondary);
 }
 
 .aside__content--description2 {
-    margin-top: 8px;
+    margin-top: 4px;
     font-size: 12px;
-    line-height: 10px;
+    line-height: 12px;
+    letter-spacing: -0.5px;
+    word-spacing: 0.5px;
     color: #767884;
 }
 
@@ -253,5 +277,5 @@ p.devider {
 }
 
 .aside__action {
-    margin-top: 50px;
+    margin-top: 48px;
 }
