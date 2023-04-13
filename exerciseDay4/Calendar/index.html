@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Calendar</title>
+    </head>
+    <body>
+        <main class="container">
+            <form class="control">
+                <input
+                    id="daytime"
+                    type="datetime-local"
+                    onchange="handleChangeInputDay"
+                />
+                <div class="control__navigation">
+                    <button
+                        class="control__navigation--item control__navigation--btn"
+                    >
+                        <i class="far fa-long-arrow-left"></i>
+                        <i class="fal fa-long-arrow-left"></i>
+                    </button>
+
+                    <button
+                        class="control__navigation--item control__navigation--btn"
+                    >
+                        <i class="fal fa-long-arrow-left"></i>
+                    </button>
+                    <select
+                        id="month"
+                        class="control__navigation--item control__navigation--select"
+                    ></select>
+                    <select
+                        id="year"
+                        class="control__navigation--item control__navigation--select"
+                    ></select>
+                    <button
+                        class="control__navigation--item control__navigation--btn"
+                    >
+                        <i class="fal fa-long-arrow-right"></i></button
+                    ><button
+                        class="control__navigation--item control__navigation--btn"
+                    >
+                        <i class="fal fa-long-arrow-right"></i
+                        ><i class="fal fa-long-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="calendar">
+                <ul class="calendar__dayname">
+                    <li class="calendar__dayname--item"><p>Sun</p></li>
+                    <li class="calendar__dayname--item"><p>Mon</p></li>
+                    <li class="calendar__dayname--item"><p>Tue</p></li>
+                    <li class="calendar__dayname--item"><p>Web</p></li>
+                    <li class="calendar__dayname--item"><p>Thu</p></li>
+                    <li class="calendar__dayname--item"><p>Fri</p></li>
+                    <li class="calendar__dayname--item"><p>Sat</p></li>
+                </ul>
+                <ul id="daytable" class="calendar__daynum"></ul>
+            </div>
+        </main>
+
+        <script src="./index.js"></script>
+        <script
+            src="https://kit.fontawesome.com/18e1a5fca9.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
