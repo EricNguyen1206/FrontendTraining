@@ -1,0 +1,37 @@
+@use "../base/variables" as *;
+
+.ajax-form {
+    margin-top: 18px;
+    background-color: #fff;
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        label {
+            width: 107px;
+            padding-right: 18px;
+            color: #000;
+            text-align: right;
+        }
+
+        input {
+            border: 1px solid #b6eece;
+            width: 255px;
+            height: 29px;
+        }
+
+        &--warning {
+            color: #ff0000;
+            font-size: 12px;
+            padding-left: 2px;
+        }
+    }
+
+    &__password {
+        margin-top: 14px;
+    }
+    &__email {
+        margin-top: 8px;
+    }
+}

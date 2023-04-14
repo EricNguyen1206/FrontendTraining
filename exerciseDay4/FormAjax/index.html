@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="dist/styles.css" />
+        <title>Ajax form</title>
+    </head>
+    <body>
+        <main class="container">
+            <form class="ajax-form">
+                <!-- input fields -->
+                <div class="ajax-form__username ajax-form__item">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" />
+                    <p
+                        id="username-warning"
+                        class="ajax-form__item--warning"
+                    ></p>
+                </div>
+                <div class="ajax-form__password ajax-form__item">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" />
+                    <p
+                        id="password-warning"
+                        class="ajax-form__item--warning active"
+                    ></p>
+                </div>
+                <div class="ajax-form__email ajax-form__item">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                    <p id="email-warning" class="ajax-form__item--warning"></p>
+                </div>
+                <div class="ajax-form__datetime ajax-form__item">
+                    <label>Birthday</label>
+                    <!-- date time picker -->
+                    <div class="datetime-picker">
+                        <button
+                            id="datetime-btn"
+                            class="datetime-picker__button"
+                            type="button"
+                        >
+                            <p id="datetime-btn-content"></p>
+                            <i class="far fa-calendar-alt"></i>
+                        </button>
+                        <div class="datetime-picker__navigation">
+                            <!-- the month(s) before -->
+                            <button
+                                id="doubleBack"
+                                type="button"
+                                class="control__navigation--item datetime-picker__navigation--btn"
+                            >
+                                <i class="fas fa-long-arrow-left"></i>
+                                <i class="fas fa-long-arrow-left"></i>
+                            </button>
+                            <button
+                                id="back"
+                                type="button"
+                                class="control__navigation--item datetime-picker__navigation--btn"
+                            >
+                                <i class="fas fa-long-arrow-left"></i>
+                            </button>
+
+                            <!-- month selector -->
+                            <select
+                                id="month"
+                                class="control__navigation--item control__navigation--select"
+                            ></select>
+
+                            <!-- year selector -->
+                            <select
+                                id="year"
+                                class="control__navigation--item control__navigation--select"
+                            ></select>
+
+                            <!-- the month(s) after -->
+                            <button
+                                id="next"
+                                type="button"
+                                class="control__navigation--item datetime-picker__navigation--btn"
+                            >
+                                <i class="fas fa-long-arrow-right"></i>
+                            </button>
+                            <button
+                                id="doubleNext"
+                                type="button"
+                                class="control__navigation--item datetime-picker__navigation--btn"
+                            >
+                                <i class="fas fa-long-arrow-right"></i>
+                                <i class="fas fa-long-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="calendar">
+                            <ul class="calendar__dayname">
+                                <li class="calendar__dayname--item">
+                                    <p>Sun</p>
+                                </li>
+                                <li class="calendar__dayname--item">
+                                    <p>Mon</p>
+                                </li>
+                                <li class="calendar__dayname--item">
+                                    <p>Tue</p>
+                                </li>
+                                <li class="calendar__dayname--item">
+                                    <p>Web</p>
+                                </li>
+                                <li class="calendar__dayname--item">
+                                    <p>Thu</p>
+                                </li>
+                                <li class="calendar__dayname--item">
+                                    <p>Fri</p>
+                                </li>
+                                <li class="calendar__dayname--item">
+                                    <p>Sat</p>
+                                </li>
+                            </ul>
+                            <ul id="daytable" class="calendar__daynum"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- action buttons -->
+                <div class="action-button">
+                    <button
+                        id="submit-btn"
+                        class="action-button__submit"
+                        type="button"
+                    >
+                        Submit
+                    </button>
+                    <button id="refresh-btn" class="action-button__refresh">
+                        > Refresh
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <script src="dist/app.js"></script>
+        <script
+            src="https://kit.fontawesome.com/18e1a5fca9.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

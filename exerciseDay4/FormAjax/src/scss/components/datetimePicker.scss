@@ -1,0 +1,92 @@
+$unit-height: 23px;
+
+.datetime-picker {
+    &__button {
+        width: 255px;
+        height: 29px;
+        margin-top: 8px;
+        padding-right: 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #b6eece;
+
+        i {
+            font-size: 25px;
+            color: #03a9f4;
+        }
+    }
+
+    &__navigation {
+        width: 198px;
+        margin-top: 2px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        &--item {
+            height: $unit-height;
+            border: 1px solid #2d2d2d;
+        }
+
+        #month {
+            grid-column: 3 / 5;
+        }
+
+        &--btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            background-color: #a9cce3;
+            color: #2e97cf;
+        }
+    }
+
+    .calendar {
+        width: 198px;
+        background-color: #d7dbdd;
+        &__dayname,
+        &__daynum {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        &__dayname {
+            &--item {
+                height: $unit-height;
+                display: flex;
+                background-color: #3498db;
+                border: 1px solid #b2babb;
+                list-style: none;
+                align-items: center;
+                justify-content: center;
+                p {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #7b241c;
+                }
+            }
+        }
+
+        &__daynum {
+            &--item {
+                height: $unit-height;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                border: 0.5px solid #b2babb;
+                background-color: #fff;
+                cursor: pointer;
+            }
+            &--item.blank {
+                background-color: transparent;
+                cursor: default;
+            }
+            &--item.active {
+                background-color: #00ace6;
+            }
+        }
+    }
+}

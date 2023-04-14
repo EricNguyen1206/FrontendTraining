@@ -1,0 +1,9 @@
+@use "../base/variables" as *;
+
+$profile-title-fs: 1.0625rem;
+$container-width: 519px;
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+}
