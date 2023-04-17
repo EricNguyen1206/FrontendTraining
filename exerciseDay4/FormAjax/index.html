@@ -32,6 +32,8 @@
                     <input type="email" name="email" id="email" />
                     <p id="email-warning" class="ajax-form__item--warning"></p>
                 </div>
+
+                <!-- input datetime -->
                 <div class="ajax-form__datetime ajax-form__item">
                     <label>Birthday</label>
                     <!-- date time picker -->
@@ -41,57 +43,71 @@
                             class="datetime-picker__button"
                             type="button"
                         >
-                            <p id="datetime-btn-content"></p>
-                            <i class="far fa-calendar-alt"></i>
+                            <input type="text" id="datetime-btn-content"></input>
+                            <i id="datetime-btn-icon" class="far fa-calendar-alt"></i>
                         </button>
-                        <div class="datetime-picker__navigation">
-                            <!-- the month(s) before -->
-                            <button
-                                id="doubleBack"
-                                type="button"
-                                class="control__navigation--item datetime-picker__navigation--btn"
-                            >
-                                <i class="fas fa-long-arrow-left"></i>
-                                <i class="fas fa-long-arrow-left"></i>
-                            </button>
-                            <button
-                                id="back"
-                                type="button"
-                                class="control__navigation--item datetime-picker__navigation--btn"
-                            >
-                                <i class="fas fa-long-arrow-left"></i>
-                            </button>
 
-                            <!-- month selector -->
-                            <select
-                                id="month"
-                                class="control__navigation--item control__navigation--select"
-                            ></select>
+                        <div id="calendar" class="calendar">
+                            <ul class="calendar__navigation">
+                                <!-- the month(s) before -->
+                                <li class="calendar__navigation--item">
+                                    <button
+                                        id="doubleBack"
+                                        type="button"
+                                        class="datetime-picker__navigation--btn"
+                                    >
+                                        <i class="fas fa-long-arrow-left"></i>
+                                        <i class="fas fa-long-arrow-left"></i>
+                                    </button> 
+                                </li>
+                                <li class="calendar__navigation--item">
+                                    <button
+                                        id="back"
+                                        type="button"
+                                        class="datetime-picker__navigation--btn"
+                                    >
+                                        <i class="fas fa-long-arrow-left"></i>
+                                    </button>
+                                </li>
 
-                            <!-- year selector -->
-                            <select
-                                id="year"
-                                class="control__navigation--item control__navigation--select"
-                            ></select>
+                                <!-- month selector -->
+                                <li class="calendar__navigation--item month-select-item">
+                                    <select
+                                        id="month"
+                                        class="calendar__navigation--select"
+                                    ></select>
+                                </li>
 
-                            <!-- the month(s) after -->
-                            <button
-                                id="next"
-                                type="button"
-                                class="control__navigation--item datetime-picker__navigation--btn"
-                            >
-                                <i class="fas fa-long-arrow-right"></i>
-                            </button>
-                            <button
-                                id="doubleNext"
-                                type="button"
-                                class="control__navigation--item datetime-picker__navigation--btn"
-                            >
-                                <i class="fas fa-long-arrow-right"></i>
-                                <i class="fas fa-long-arrow-right"></i>
-                            </button>
-                        </div>
-                        <div class="calendar">
+                                <!-- year selector -->
+                                <li class="calendar__navigation--item year-select-item">
+                                    <select
+                                        id="year"
+                                        class="calendar__navigation--select"
+                                    ></select>
+                                </li>
+
+                                <!-- the month(s) after -->
+                                <li class="calendar__navigation--item">
+                                    <button
+                                        id="next"
+                                        type="button"
+                                        class="datetime-picker__navigation--btn"
+                                    >
+                                        <i class="fas fa-long-arrow-right"></i>
+                                    </button>
+                                </li>
+                                <li class="calendar__navigation--item">
+                                    <button
+                                        id="doubleNext"
+                                        type="button"
+                                        class="datetime-picker__navigation--btn"
+                                    >
+                                        <i class="fas fa-long-arrow-right"></i>
+                                        <i class="fas fa-long-arrow-right"></i>
+                                    </button>
+                                </li>
+                            </ul>
+
                             <ul class="calendar__dayname">
                                 <li class="calendar__dayname--item">
                                     <p>Sun</p>
@@ -115,6 +131,7 @@
                                     <p>Sat</p>
                                 </li>
                             </ul>
+
                             <ul id="daytable" class="calendar__daynum"></ul>
                         </div>
                     </div>
@@ -130,7 +147,7 @@
                         Submit
                     </button>
                     <button id="refresh-btn" class="action-button__refresh">
-                        > Refresh
+                        Refresh
                     </button>
                 </div>
             </form>

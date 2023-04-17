@@ -74,7 +74,11 @@ const createNormalDay = (daynum, isActive = false) => {
  * rerenderControllers
  */
 const rerenderControllers = () => {
-  daytimeInput.value = currentDay;
+  daytimeInput.value = currentDay.getDate() +
+    "/" +
+    (currentDay.getMonth() + 1) +
+    "/" +
+    currentDay.getFullYear();
   monthSelectElement.value = currentDay.getMonth();
   yearSelectElement.value = currentDay.getFullYear();
 }
@@ -89,7 +93,7 @@ const renderDayOfMonth = (value) => {
   const lastDay = new Date(value.getFullYear(), value.getMonth() + 1, 0);
   const dow = firstDay.getDay() + 1;
   const tt = lastDay.getDate();
-  for (let blank = 0; blank < dow; blank++) {
+  for (let blank = 0; blank < dow % 7; blank++) {
     dayTable.appendChild(createBlankDay());
   }
 
@@ -97,7 +101,7 @@ const renderDayOfMonth = (value) => {
     dayTable.appendChild(createNormalDay(day, day === value.getDate()));
   }
 
-  for (let blank = tt; blank <= 42; blank++) {
+  for (let blank = dayTable.childElementCount; blank < 42; blank++) {
     dayTable.appendChild(createBlankDay());
   }
   rerenderControllers()

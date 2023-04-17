@@ -8,6 +8,7 @@ const doubleBackBtn = document.getElementById("doubleBack");
 const backBtn = document.getElementById("back");
 const nextBtn = document.getElementById("next");
 const doubleNextBtn = document.getElementById("doubleNext");
+const calendar = document.getElementById("calendar");
 
 const months = [
   "January",
@@ -83,7 +84,7 @@ const createNormalDay = (daynum, isActive = false) => {
  * rerenderControllers
  */
 const rerenderControllers = (curDay) => {
-  datetimeBtnContent.innerHTML =
+  datetimeBtnContent.value =
     curDay.getDate() +
     "/" +
     (curDay.getMonth() + 1) +
@@ -163,13 +164,14 @@ const handleClickControllerBtn = (nMonth) => {
   renderDayOfMonth();
 };
 
+renderDayOfMonth();
 monthSelectElement.addEventListener("change", handleChangeOptionMonth);
 yearSelectElement.addEventListener("change", handleChangeOptionYear);
 doubleBackBtn.addEventListener("click", () => handleClickControllerBtn(-2));
 backBtn.addEventListener("click", () => handleClickControllerBtn(-1));
 doubleNextBtn.addEventListener("click", () => handleClickControllerBtn(1));
 nextBtn.addEventListener("click", () => handleClickControllerBtn(2));
-renderDayOfMonth();
 
-
-// modules.exports = { currentDay, renderDayOfMonth }
+datetimeBtn.addEventListener("click", () => {
+  calendar.classList.toggle("visible")
+})

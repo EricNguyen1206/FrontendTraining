@@ -19,7 +19,6 @@ const resetWarning = () => {
 }
 
 const handleRefresh = (e) => {
-  // renderDayOfMonth();
   usernameInput.value = '';
   passwordInput.value = '';
   emailInput.value = '';
@@ -35,16 +34,16 @@ const handleSubmit = (e) => {
   const nameTest = usernameInput.value.length >= 8;
   const passTest = passwordInput.value.length >= 8;
   const mailTest = mailRegex.test(emailInput.value);
-  const dateArg = datetimeContent.innerHTML.split('/')
+  const dateArg = datetimeContent.value.split('/')
   const dateSubmited = new Date(dateArg[2], dateArg[1], dateArg[0]);
 
   if (!nameTest) {
-    usernameWarning.innerText = "Username min 8 letter";
+    usernameWarning.innerText = "Username length min 8 letter";
     usernameWarning.classList.add('active');
     return;
   }
   if (!passTest) {
-    passwordWarning.innerHTML = "Password min 8 letter";
+    passwordWarning.innerHTML = "Password length min 8 letter";
     passwordWarning.classList.add('active');
     return;
   }

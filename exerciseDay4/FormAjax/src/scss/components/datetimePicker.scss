@@ -5,47 +5,70 @@ $unit-height: 23px;
         width: 255px;
         height: 29px;
         margin-top: 8px;
-        padding-right: 2px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: #fff;
-        border: 1px solid #b6eece;
+        border: none;
+        position: relative;
 
         i {
+            position: absolute;
+            right: 2px;
+            top: 1px;
+            display: inline;
             font-size: 25px;
             color: #03a9f4;
-        }
-    }
-
-    &__navigation {
-        width: 198px;
-        margin-top: 2px;
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        &--item {
-            height: $unit-height;
-            border: 1px solid #2d2d2d;
-        }
-
-        #month {
-            grid-column: 3 / 5;
-        }
-
-        &--btn {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            background-color: #a9cce3;
-            color: #2e97cf;
+            cursor: pointer;
         }
     }
 
     .calendar {
         width: 198px;
+        margin-top: 2px;
         background-color: #d7dbdd;
+        &__navigation {
+            width: 100%;
+            display: grid;
+            list-style: none;
+            grid-template-columns: repeat(7, 1fr);
+            &--item {
+                height: $unit-height;
+                width: 100%;
+                background-color: #a9cce3;
+                border: 1px solid #b2babb;
+
+                button {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    line-height: 4px;
+                    background-color: transparent;
+                    color: #2e97cf;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            .month-select-item {
+                grid-column: 3 / 5;
+            }
+
+            .year-select-item {
+                select {
+                    min-width: none;
+                }
+            }
+            #year {
+                width: 100%;
+                display: block;
+                min-width: none;
+            }
+        }
         &__dayname,
         &__daynum {
             display: grid;
@@ -88,5 +111,12 @@ $unit-height: 23px;
                 background-color: #00ace6;
             }
         }
+    }
+
+    #calendar {
+        display: none;
+    }
+    #calendar.visible {
+        display: block;
     }
 }
