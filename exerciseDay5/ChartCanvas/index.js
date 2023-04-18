@@ -46,15 +46,14 @@ class BarChart {
     this.titleOptions = options.titleOptions;
     this.maxValue = Math.max(...Object.values(this.options.data));
     this.gap = options.gap || 0;
+    this.padding = options.padding;
   }
 
   drawGridLines() {
-    var canvasActualHeight = this.canvas.height - this.options.padding * 2;
-    var canvasActualWidth = this.canvas.width - this.options.padding * 2;
-
-    var gridValue = 0;
+    let canvasActualHeight = this.canvas.height - this.options.padding * 2;
+    let gridValue = 0;
     while (gridValue <= this.maxValue) {
-      var gridY =
+      let gridY =
         canvasActualHeight * (1 - gridValue / this.maxValue) +
         this.options.padding;
       drawLine(
