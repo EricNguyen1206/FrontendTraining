@@ -1,0 +1,80 @@
+@use "../common/variables" as *;
+
+.aside {
+    &__thumb {
+        height: 164px;
+        padding: 0 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        background-image: url("./assets/images/thump_aside_1.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+
+        &--title {
+            line-height: 40px;
+            font-size: 1.7rem;
+            font-weight: 500;
+            text-shadow: 0 0 4px #fff;
+        }
+
+        &--description {
+            font-size: 1.3rem;
+            line-height: 16px;
+            text-shadow: 0 0 4px #fff;
+            span {
+                color: #ff0000;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 18px;
+        background-color: #fffcf8;
+        border: 1px solid #e9dfd9;
+        border-radius: 2px;
+        padding: 5px;
+
+        &-wrapper {
+            background-color: #fff;
+            border: 1px solid #e9dfd9;
+            border-radius: 2px;
+            padding: 14px 10px;
+        }
+
+        &--title {
+            font-size: 1.7rem;
+            line-height: 30px;
+            margin-top: -10px;
+            margin-bottom: 5px;
+            border-bottom: 2px solid $primary;
+        }
+
+        &--section {
+            height: 32px;
+            font-size: 1.4rem;
+            line-height: 40px;
+            border-bottom: 1px solid #e9dfd9;
+            .fa-circle {
+                color: $primary;
+                font-size: 1.2rem;
+                margin-right: 6px;
+            }
+        }
+
+        &--list {
+            margin-top: 4px;
+            padding-left: 15px;
+            li > p {
+                font-size: 1.2rem;
+                line-height: 21px;
+                .fa-caret-right {
+                    margin-right: 10px;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@use "../common//variables" as *;
+
+.header {
+    .notification {
+        line-height: 40px;
+        font-size: 1.2rem;
+        margin-top: -4px;
+        margin-left: 4px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        margin-left: 4px;
+        margin-top: -6px;
+    }
+
+    &__info {
+        margin-right: 8px;
+        p {
+            text-align: right;
+        }
+
+        &--address {
+            letter-spacing: -0.3px;
+        }
+
+        &--number,
+        &--dayoff {
+            line-height: 40px;
+            letter-spacing: -0.3px;
+            color: $text-highlight;
+            font-size: 2.8rem;
+        }
+
+        &--dayoff {
+            font-size: 1.2rem;
+            margin-top: -10px;
+            span {
+                margin-left: 10px;
+            }
+        }
+
+        &--working-time,
+        &--booking-time {
+            line-height: 18px;
+            font-size: 1.2rem;
+            word-spacing: 3px;
+            letter-spacing: 0.2px;
+            span {
+                margin-left: 8px;
+            }
+        }
+    }
+}

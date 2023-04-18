@@ -1,0 +1,106 @@
+// $responsive là giá trị muốn muốn responsive
+// $min: là giá trị nhỏ nhất bạn mong muốn
+// $max: là giá trị lớn nhất bạn mong muốn
+// $min or $max thường chỉ được 2/3 so với $responsive
+// Ví dụ:
+// h1 {
+//     @include responsive-font(get-vw-hack(1030px, 60px), 30px, 60px);
+// }
+
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+    $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+    $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+    $min-breakpoint: $min / $responsive-unitless * 100;
+  
+    @media (max-#{$dimension}: #{$min-breakpoint}) {
+      font-size: $min;
+    }
+  
+    @if $max {
+      $max-breakpoint: $max / $responsive-unitless * 100;
+  
+      @media (min-#{$dimension}: #{$max-breakpoint}) {
+        font-size: $max;
+      }
+    }
+  
+    @if $fallback {
+      font-size: $fallback;
+    }
+  
+    font-size: $responsive;
+}
+  
+// Có container là 1600 cho pc
+@function get-vw($target) {
+    $vw-context: (1600 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+}
+
+// Có container là 640 cho sp
+@function get-vw-sp($target) {
+    $vw-context: (640 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+}
+
+// $width là Responsive breakpoints
+// $xs: 320px;
+// $sm: 640px;
+// $md: 768px;
+// $pc: 1030px;
+// $lg: 1300px;
+// $xl: 1600px;
+// $rentina: 2000px;
+@function get-vw-hack($width, $size) {
+    $vw-context: $width * 0.01;
+    @return ($size / $vw-context) * 1vw;
+}
+
+// Ví dụ:
+// <div class='item' styles='width: 230px;'>
+//     <p>ABc</p>
+// </div>
+// Muốn p có padding-top là 17px
+// padding-top: calc-percent(17, 230);
+@function calc-percent($target, $container) {
+    @return ($target / $container) * 100%;
+}
+
+// toRem
+// ------------------------------------------------------------
+// 数値をpxとして扱いremに変換
+//
+// @param {number} $size
+// @return {length} - 引数を px -> rem に変換した値
+@function -rem($size, $base: $fz-base-px){
+    $size: stripUnit($size);
+    @return ($size / $base) * 1rem;
+}
+
+// ------------------------------------------------------------
+// mixins
+// ------------------------------------------------------------
+
+// Media queries
+// ------------------------------------------------------------
+@mixin mqMin($min){
+    $min: stripUnit($min);
+    @media screen and (min-width: #{$min+1}px){
+      @content;
+    }
+}
+  
+@mixin mqMax($max){
+    $max: stripUnit($max);
+    @media screen and (max-width: #{$max}px){
+      @content;
+    }
+}
+  
+@mixin mqMinMax($min, $max){
+    $min: #{stripUnit($min)+1}px;
+    $max: #{stripUnit($max)}px;
+    @media screen and (min-width: $min) and (max-width: $max){
+      @content;
+    }
+}

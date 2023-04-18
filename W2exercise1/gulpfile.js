@@ -42,9 +42,16 @@ gulp.task("font", function () {
 });
 
 gulp.task("watch", function () {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
   gulp.watch("**/*.html").on("change", browserSync.reload);
   gulp.watch("src/**/*.ts", gulp.series("compile"));
   gulp.watch("src/**/*.scss", gulp.series("sass"));
 });
 
 gulp.task("default", gulp.series("compile", "sass", "image", "font", "watch"));
+
+// exports.default = series(parallel(css, js, copyFonts), watchForChanges);

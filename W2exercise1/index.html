@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="ĐÀO TẠO HTML - CSS - Js - Reponsive"
-        />
-        <meta name="keywords" content="HTML, CSS, JavaScript" />
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="dist/styles.css" />
-        <title>FeMinine</title>
-    </head>
-    <body>
-        <main class="container">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ĐÀO TẠO HTML - CSS - Js - Reponsive" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="dist/styles.css" />
+    <title>FeMinine</title>
+</head>
+
+<body>
+    <main>
+        <header class="header container">
             <p class="notification">
                 滋賀県草津市のエステ・発毛・育毛の専門家がいるサロンです。
             </p>
-
-            <header class="header">
+            <div class="header__wrapper">
                 <div class="header__logo">
                     <img src="./dist/assets/images/logo_2.png" alt="" />
                     <img src="./dist/assets/images/logo_1.png" alt="" />
@@ -28,200 +27,254 @@
                     <p class="header__info--address">
                         滋賀県草津市大路1丁目8-1 南洋軒ビル6F
                     </p>
-                    <p class="header__info--number">077-566-1070</p>
+                    <p class="header__info--number">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>077-566-1070</span>
+                    </p>
                     <p class="header__info--working-time">
-                        営業時間　11:00～21:00
+                        <span>営業時間</span>
+                        <span>11:00 ~ 21:00</span>
                     </p>
                     <p class="header__info--booking-time">
-                        ※入店・予約受付　19:30まで
+                        <span>※入店・予約受付</span>
+                        <span>19:30まで</span>
                     </p>
-                    <p class="header__info--dayoff">定休日 火曜日</p>
+                    <p class="header__info--dayoff">
+                        <span>定休日</span> <span>火曜日</span>
+                    </p>
                 </div>
-            </header>
+            </div>
+        </header>
 
-            <nav class="navbar">
-                <ul>
-                    <li class="navbar__item">
-                        <a href="#" target="_blank" rel="noopener noreferrer"
-                            >Home</a
-                        >
-                    </li>
-                    <li class="navbar__item">
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ></a>
-                    </li>
-                    <li class="navbar__item menu">
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ></a>
-                        <ul>
-                            <li class="submenu">
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                ></a>
-                                <ul>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        ></a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="#"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        ></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                ></a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                ></a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                ></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="navbar__item">
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ></a>
-                    </li>
-                    <li class="navbar__item">
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ></a>
-                    </li>
-                    <li class="navbar__item">
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ></a>
-                    </li>
-                    <li class="navbar__item">
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        ></a>
-                    </li>
-                </ul>
-            </nav>
-
-            <ul class="banner">
-                <li class="banner__item">
-                    <img src="" alt="" srcset="" />
+        <nav class="navbar">
+            <ul class="container">
+                <li class="navbar__item">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="navbar__item--link active">
+                        Home
+                    </a>
                 </li>
-                <li class="banner__item">
-                    <img src="" alt="" srcset="" />
+                <li class="navbar__item">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="navbar__item--link">店舗紹介</a>
+                </li>
+                <li class="navbar__item menu">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="navbar__item--link">エステ</a>
+                    <ul>
+                        <li class="submenu">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="active">フェイシャル
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="active">
+                                        発毛
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">症例
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">ダイエット</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">脱毛</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">美肌再生プログラム</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="navbar__item--link">ヘアクリニック</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="navbar__item--link">よくあるご質問</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="navbar__item--link">お客様の声</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="navbar__item--link">アクセス</a>
                 </li>
             </ul>
+        </nav>
 
-            <div>
-                <div class="main-content">
-                    <acticle class="acticle">
-                        <h2></h2>
-                    </acticle>
-                    <div class="services">
-                        <h2></h2>
-                    </div>
-                    <div class="news">
-                        <h2></h2>
-                    </div>
-                </div>
+        <article class="body">
+            <section class="banner">
+                <ul class="container">
+                    <li class="banner__item">
+                        <img src="./dist/assets/images/banner_1.png" alt="" srcset="" />
+                        <p class="banner__item--text">
+                            豊富な症例に基づいた毛髪サポート
+                        </p>
+                    </li>
+                    <!-- <li class="banner__item">
+                            <img src="" alt="" srcset="" />
+                            <p class="banner__item--text">
+                                皆様の美（ビューティー）をサポート 
+                            </p>
+                        </li> -->
+                </ul>
+            </section>
+
+            <div class="wrapper container">
+                <section class="content">
+                    <section class="post">
+                        <h2 class="content__title">コンセプト</h2>
+                        <div class="post__wrapper">
+                            <img src="./dist/assets/images/thumb_acticle_1.png" alt="" class="post__img">
+                            <div class="post__text">
+                                <p>Feminine（フェミニン）では、フェイシャル・ボディトリートメントを通して「女性らしく」をテーマに皆様の美（ビューティー）をサポートします。
+                                    <br>
+                                    <br>
+                                    下記、安心のお約束を致します。<br>
+                                    <span>
+                                        ・完全個室での施術です。<br>
+                                        ・強引な勧誘セールスは一切ありません。<br>
+                                        ・お客様に合ったメニューと回数を提案致します。<br>
+                                        ・安心予約制でお待たせしません。時間内しっかり施術保証です。<br>
+                                    </span>
+                                        <br>
+                                    また当サロンでは男女問わず薄毛で悩んでおられる方に対し、厚生労働大臣製造承認の発毛薬用アクティトニックと独自の技術により、薄毛・脱毛に悩む５万人以上の方々から効果と安全性を実証しています。
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="services">
+                        <h2 class="content__title">メニュー</h2>
+                        <ul class="services__list">
+                            <li class="services__item">
+                                <img src="./dist/assets/images/thumb_card_1.png" alt="">
+                                <div class="services__text">
+                                    <h4 class="services__description">フェイシャル</h4>
+                                    <p class="services__description">
+                                        シミ・シワ・たるみ・ツヤ・ハリ など人によってお悩みが異なりま す。当サロンでは、お肌の状態に 合わせたオーダーメイドフェイ シャルを施術させて頂いており ます。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <img src="./dist/assets/images/thumb_card_1.png" alt="">
+                                <div class="services__text">
+                                    <h4 class="services__description">フェイシャル</h4>
+                                    <p class="services__description">
+                                        シミ・シワ・たるみ・ツヤ・ハリ など人によってお悩みが異なりま す。当サロンでは、お肌の状態に 合わせたオーダーメイドフェイ シャルを施術させて頂いており ます。
+                                    </p>
+                                </div></li>
+                            <li class="services__item">
+                                <img src="./dist/assets/images/thumb_card_1.png" alt="">
+                                <div class="services__text">
+                                    <h4 class="services__description">フェイシャル</h4>
+                                    <p class="services__description">
+                                        シミ・シワ・たるみ・ツヤ・ハリ など人によってお悩みが異なりま す。当サロンでは、お肌の状態に 合わせたオーダーメイドフェイ シャルを施術させて頂いており ます。
+                                    </p>
+                                </div></li>
+                        </ul>
+                    </section>
+                    <section class="news">
+                        <h2 class="content__title">新着情報</h2>
+                    </section>
+                </section>
                 <aside class="aside">
-                    <div class="asside__thumb">
-                        <h3 class="asside__thumb--title">脱毛</h3>
+                    <div class="aside__thumb">
+                        <h3 class="aside__thumb--title">脱毛</h3>
                         <p class="aside__thumb--description">
-                            あなたは今の脱毛に満足していますか？他店で満足いかなかった方の満足度が違います！！
+                            あなたは今の脱毛に満足していますか？他店で満足いかなかった方の<span>満足度</span>が違います！！
                         </p>
                     </div>
                     <div class="aside__content">
-                        <h3 class="aside__content--title">取り扱いメニュー</h3>
-                        <h4 class="aside__content-section">エステ</h4>
-                        <ul class="aside__content-list">
-                            <li><p>フェイシャル</p></li>
-                            <li><p>ダイエット</p></li>
-                            <li><p>脱毛</p></li>
-                            <li><p>美肌再生プログラム</p></li>
-                        </ul>
+                        <div class="aside__content-wrapper">
+                            <h3 class="aside__content--title">
+                                取り扱いメニュー
+                            </h3>
+                            <h4 class="aside__content--section">
+                                <i class="fa-regular fa-circle"></i> エステ
+                            </h4>
+                            <ul class="aside__content--list">
+                                <li>
+                                    <p>
+                                        <i class="fa-solid fa-caret-right"></i>フェイシャル
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <i class="fa-solid fa-caret-right"></i>ダイエット
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <i class="fa-solid fa-caret-right"></i>脱毛
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <i class="fa-solid fa-caret-right"></i>美肌再生プログラム
+                                    </p>
+                                </li>
+                            </ul>
 
-                        <h4 class="aside__content-section">ヘアクリニック</h4>
-                        <ul class="aside__content-list">
-                            <li><p>アクティについて</p></li>
-                            <li><p>発毛</p></li>
-                            <li><p>症例</p></li>
-                        </ul>
+                            <h4 class="aside__content--section">
+                                <i class="fa-regular fa-circle"></i>ヘアクリニック
+                            </h4>
+                            <ul class="aside__content--list">
+                                <li>
+                                    <p></p>
+                                    <i class="fa-solid fa-caret-right"></i>アクティについて
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <i class="fa-solid fa-caret-right"></i>発毛
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <i class="fa-solid fa-caret-right"></i>症例
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </aside>
             </div>
+        </article>
 
-            <footer class="footer">
-                <div class="contact">
-                    <img src="" alt="" />
-                </div>
-                <div class="direction">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div class="responsibility">
-                    <h4>取り扱いメニュー</h4>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </footer>
-        </main>
+        <footer class="footer">
+            <div class="contact">
+                <img src="" alt="" />
+            </div>
+            <div class="direction">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="responsibility">
+                <h4>取り扱いメニュー</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
 
-        <!--==================== JS ====================-->
-        <script src="dist/app.js"></script>
-        <!--==================== Fontawesome Icons ====================-->
-        <script
-            src="https://kit.fontawesome.com/18e1a5fca9.js"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <!--==================== JS ====================-->
+    <script src="dist/app.js"></script>
+    <!--==================== Icons ====================-->
+    <script src="https://kit.fontawesome.com/18e1a5fca9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</body>
+
 </html>

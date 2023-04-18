@@ -1,0 +1,20 @@
+@use "../common//variables" as *;
+@use "../common/mixins" as *;
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    @include mqMax($lg) {
+        max-width: 960px;
+    }
+    max-width: 960px;
+}
+
+.body {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 230px auto auto 230px;
+        gap: 30px;
+        margin-top: 32px;
+    }
+}

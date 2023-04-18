@@ -1,0 +1,120 @@
+@use "../common//variables" as *;
+
+$nav-height: 55px;
+$nav-divider-height: 23px;
+$border-submenu: #d19c5d;
+
+.navbar {
+    height: $nav-height;
+    border-top: 1px solid $border-primary;
+    border-bottom: 1px solid $border-primary;
+
+    background: $bg-paper;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 100%;
+    }
+
+    &__item {
+        height: 100%;
+        position: relative;
+        &::before {
+            width: 1px;
+            height: $nav-divider-height;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            content: "";
+            transform: translateY(-50%);
+            border-left: 1px solid $boder-primary-dark;
+        }
+
+        &--link {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 7px;
+            border-radius: 2px;
+
+            color: $text-primary;
+            font-size: 1.5rem;
+            line-height: 40px;
+            letter-spacing: -0.6px;
+
+            text-align: center;
+            text-transform: uppercase;
+            &.active {
+                background: url(./assets/images/bg-overlay.png) no-repeat center;
+                color: #fff;
+                font-weight: 500;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+    &__item:last-child {
+        &::after {
+            width: 1px;
+            height: $nav-divider-height;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            content: "";
+            transform: translateY(-50%);
+            border-right: 1px solid $boder-primary-dark;
+        }
+    }
+
+    &__item.menu {
+        position: relative;
+
+        ul {
+            width: 100%;
+            height: fit-content;
+            position: absolute;
+            top: 52px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: $primary-light;
+            li {
+                height: 40px;
+                padding: 2px;
+                border-bottom: 1px solid $border-submenu;
+
+                &:last-child {
+                    border: none;
+                }
+                a {
+                    display: block;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 2px;
+
+                    color: $text-primary;
+                    font-size: 1.5rem;
+                    line-height: 38px;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    &.active {
+                        background: url(./assets/images/bg-overlay.png)
+                            no-repeat center;
+                        color: #fff;
+                        font-weight: 500;
+                    }
+                }
+                &.submenu {
+                    position: relative;
+                    ul {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

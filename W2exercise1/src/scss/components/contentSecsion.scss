@@ -1,0 +1,49 @@
+@use "../common/variables" as *;
+.content {
+    grid-column: 1 / 4;
+    &__title {
+        margin-top: -5px;
+        padding-left: 4px;
+        border-bottom: 2px solid #fff4e5;
+        position: relative;
+
+        font-size: 1.9rem;
+        line-height: 36px;
+        color: $text-primary;
+
+        &::before {
+            width: 140px;
+            height: 2px;
+            position: absolute;
+            bottom: -1px;
+            left: 0px;
+            content: "";
+            border-bottom: 3px solid #ff9200;
+        }
+    }
+    .post {
+        &__wrapper {
+            margin-top: 13px;
+            display: flex;
+            gap: 24px;
+        }
+
+        &__img {
+            width: 260px;
+            align-self: flex-start;
+            object-fit: contain;
+        }
+
+        &__text {
+            flex: 1;
+            p {
+                font-size: 1.3rem;
+                line-height: 20px;
+                span {
+                    font-weight: bold;
+                    letter-spacing: 0.6px;
+                }
+            }
+        }
+    }
+}

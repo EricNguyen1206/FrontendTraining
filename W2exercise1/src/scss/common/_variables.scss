@@ -1,10 +1,27 @@
+// palete
+$primary: #ff9200;
+$primary-dark: #f0831e;
+$primary-light: #ffc472;
+
 $bg-default: #fff;
-$bg-paper: #ececec;
+$bg-paper: #fbfbfc;
+$bg-footer: #fdf1e3;
+$bg-gradient: #fff1dd;
 
-$icon-color: #66b4fc;
-$link-color: #1424f4;
-$border-color: #e1e1e1;
+$text-primary: #66402b;
+$text-secondary: #73523f;
+$text-active: #fff;
+$text-highlight: $primary-dark;
 
-$text-primary: #000;
+$border-primary: #ccc6c2;
+$boder-primary-light: #d9d9d9;
+$boder-primary-dark: #989898;
 
-$line-height-base: 0.625rem;
+// spacing
+$xs: 320px;
+$sm: 640px;
+$md: 768px;
+$pc: 1030px;
+$lg: 1300px;
+$xl: 1600px;
+$rentina: 2000px;

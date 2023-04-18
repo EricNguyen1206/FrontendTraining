@@ -1,2 +1,10 @@
 @use "./common/base";
 @use "./common/font";
+
+@use "./components/container.scss";
+@use "./components/header.scss";
+@use "./components/navbar.scss";
+@use "./components/bannerSecsion.scss";
+@use "./components/contentSecsion.scss";
+@use "./components/aside.scss";
+@use "./components/footer.scss";
