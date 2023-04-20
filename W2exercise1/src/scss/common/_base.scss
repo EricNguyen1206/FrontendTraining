@@ -30,3 +30,27 @@ li {
 a {
     text-decoration: none;
 }
+
+@media screen and (max-width: $pc) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: $pc) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: $md) {
+    html {
+        font-size: 37.5%;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    html {
+        font-size: 25%;
+    }
+}

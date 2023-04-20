@@ -1,11 +1,13 @@
 @use "../common//variables" as *;
 
+$banner-gap: 3.6rem;
+
 .header {
     .notification {
-        line-height: 40px;
+        line-height: $line-height-base;
         font-size: 1.2rem;
-        margin-top: -4px;
-        margin-left: 4px;
+        margin-top: -0.4rem;
+        margin-left: 0.4rem;
     }
 
     &__wrapper {
@@ -15,47 +17,55 @@
     }
 
     &__logo {
+        flex: 1;
         display: flex;
         align-items: center;
-        gap: 26px;
-        margin-left: 4px;
-        margin-top: -6px;
+        margin-left: 0.4rem;
+        margin-top: -0.6rem;
+        img {
+            width: 50%;
+            margin-right: $banner-gap;
+            &:last-child {
+                transform: translateX(-1.4rem);
+            }
+        }
     }
 
     &__info {
-        margin-right: 8px;
+        flex: 1;
+        margin-right: 0.8rem;
         p {
             text-align: right;
         }
 
         &--address {
-            letter-spacing: -0.3px;
+            letter-spacing: -0.03rem;
         }
 
         &--number,
         &--dayoff {
-            line-height: 40px;
-            letter-spacing: -0.3px;
+            line-height: $line-height-base;
+            letter-spacing: -0.03rem;
             color: $text-highlight;
             font-size: 2.8rem;
         }
 
         &--dayoff {
             font-size: 1.2rem;
-            margin-top: -10px;
+            margin-top: -1rem;
             span {
-                margin-left: 10px;
+                margin-left: 1rem;
             }
         }
 
         &--working-time,
         &--booking-time {
-            line-height: 18px;
+            line-height: 1.8rem;
             font-size: 1.2rem;
-            word-spacing: 3px;
-            letter-spacing: 0.2px;
+            word-spacing: 0.3rem;
+            letter-spacing: 0.02rem;
             span {
-                margin-left: 8px;
+                margin-left: 0.8rem;
             }
         }
     }

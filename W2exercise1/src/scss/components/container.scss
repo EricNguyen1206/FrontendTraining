@@ -4,17 +4,53 @@
 .container {
     width: 100%;
     margin: 0 auto;
-    @include mqMax($lg) {
-        max-width: 960px;
-    }
     max-width: 960px;
 }
 
 .body {
     .wrapper {
-        display: grid;
-        grid-template-columns: 230px auto auto 230px;
-        gap: 30px;
-        margin-top: 32px;
+        display: flex;
+        gap: 3rem;
+        margin-top: 3.2rem;
+    }
+
+    .action-btn {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: #fb9104;
+        color: #fff;
+        border-radius: 2px;
+        font-size: 15px;
+        line-height: $line-height-base;
+        border: none;
+    }
+}
+
+@media screen and (max-width: $pc) {
+    .container {
+        max-width: $md;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .container {
+        max-width: 480px;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .container {
+        max-width: 100vw;
     }
 }

@@ -1,9 +1,15 @@
 @use "../common/variables" as *;
 
+$aside-padding: 21px;
+$aside-text-shadow: 2px 1px 2px #fff;
+
 .aside {
+    width: 50%;
+    max-width: 230px;
+
     &__thumb {
         height: 164px;
-        padding: 0 20px 10px;
+        padding: 0 2rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -14,15 +20,15 @@
         background-repeat: no-repeat;
 
         &--title {
-            line-height: 40px;
+            line-height: $line-height-base;
             font-size: 1.7rem;
             font-weight: 500;
-            text-shadow: 0 0 4px #fff;
+            text-shadow: 0 0 0.4rem #fff;
         }
 
         &--description {
             font-size: 1.3rem;
-            line-height: 16px;
+            line-height: 1.6rem;
             text-shadow: 0 0 4px #fff;
             span {
                 color: #ff0000;
@@ -31,7 +37,7 @@
     }
 
     &__content {
-        margin-top: 18px;
+        margin-top: 1.8rem;
         background-color: #fffcf8;
         border: 1px solid #e9dfd9;
         border-radius: 2px;
@@ -59,7 +65,7 @@
             border-bottom: 1px solid #e9dfd9;
             .fa-circle {
                 color: $primary;
-                font-size: 1.2rem;
+                font-size: 12px;
                 margin-right: 6px;
             }
         }
@@ -68,7 +74,7 @@
             margin-top: 4px;
             padding-left: 15px;
             li > p {
-                font-size: 1.2rem;
+                font-size: 12px;
                 line-height: 21px;
                 .fa-caret-right {
                     margin-right: 10px;
@@ -76,5 +82,113 @@
                 }
             }
         }
+    }
+
+    &__campaign {
+        height: 82px;
+        display: flex;
+        align-items: center;
+        margin-top: 23px;
+        padding: $aside-padding;
+        background-image: url("./assets/images/thumb_aside_4.png");
+        h4 {
+            font-size: 18px;
+            line-height: 40px;
+            text-shadow: $aside-text-shadow;
+        }
+    }
+
+    &__employment {
+        margin-top: 20px;
+        padding: 18px $aside-padding;
+        background-image: url("./assets/images/thumb_aside_3.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h4 {
+            font-size: 17px;
+            line-height: 40px;
+            text-shadow: $aside-text-shadow;
+        }
+        p {
+            font-size: 13px;
+            line-height: 18px;
+            text-shadow: $aside-text-shadow;
+        }
+    }
+
+    &__contact {
+        margin-top: 22px;
+        border: 6px solid #e9dfd9;
+        padding: 8px 16px 16px;
+
+        &--title {
+            font-size: 20px;
+            letter-spacing: -1px;
+            line-height: 40px;
+            word-spacing: 1px;
+        }
+        p {
+            font-size: 12px;
+            line-height: 18px;
+            word-spacing: 4px;
+            letter-spacing: 0.5px;
+        }
+        p.aside__contact--number {
+            font-size: 25.2px;
+            line-height: 36px;
+            letter-spacing: -0.3px;
+            word-spacing: 0;
+        }
+        &--address,
+        &--action,
+        &--working-time,
+        p.aside__contact--number {
+            margin-top: 6px;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: $pc) {
+    .aside {
+        &__thumb {
+            &--title {
+                line-height: $line-height-base;
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &--description {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        &__content {
+            &--title {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            &--section {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .aside {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .aside {
     }
 }
