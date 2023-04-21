@@ -68,15 +68,17 @@ $border-submenu: #d19c5d;
 
     &__item.menu {
         position: relative;
-
+        &:hover ul {
+            display: flex;
+            flex-direction: column;
+        }
         ul {
             width: 100%;
             height: fit-content;
+            display: none;
             position: absolute;
             top: 5.3rem;
             left: 0;
-            display: flex;
-            flex-direction: column;
             background-color: $primary-light;
             z-index: 10;
             li {
@@ -100,7 +102,7 @@ $border-submenu: #d19c5d;
                     letter-spacing: -0.05rem;
                     text-align: center;
                     text-transform: uppercase;
-                    &.active {
+                    &:hover {
                         background: url(./assets/images/bg-overlay.png)
                             no-repeat center;
                         color: #fff;
@@ -109,10 +111,24 @@ $border-submenu: #d19c5d;
                 }
                 &.submenu {
                     position: relative;
+                    &:hover {
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+
                     ul {
+                        display: none;
                         position: absolute;
                         top: 0;
                         left: 100%;
+                        li a:hover {
+                            background: url(./assets/images/bg-overlay.png)
+                                no-repeat center;
+                            color: #fff;
+                            font-weight: 500;
+                        }
                     }
                 }
             }
