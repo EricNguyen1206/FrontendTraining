@@ -24,6 +24,8 @@ $aside-text-shadow: 2px 1px 2px #fff;
             font-size: 1.7rem;
             font-weight: 500;
             text-shadow: 0 0 0.4rem #fff;
+            text-shadow: 1px 1px #fff, -1px 1px #fff, 1px -1px #fff,
+                -1px -1px #fff, 1px 1px 5px #555;
         }
 
         &--description {
@@ -91,6 +93,8 @@ $aside-text-shadow: 2px 1px 2px #fff;
         margin-top: 23px;
         padding: $aside-padding;
         background-image: url("./assets/images/thumb_aside_4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
         h4 {
             font-size: 18px;
             line-height: 40px;
@@ -142,9 +146,21 @@ $aside-text-shadow: 2px 1px 2px #fff;
         }
         &--address,
         &--action,
-        &--working-time,
-        p.aside__contact--number {
+        &--working-time {
             margin-top: 6px;
+        }
+
+        p.aside__contact--number {
+            margin-top: 3px;
+        }
+
+        &--number {
+            display: flex;
+            img {
+                width: 23px !important;
+                margin-right: 8px;
+                object-fit: contain;
+            }
         }
 
         img {

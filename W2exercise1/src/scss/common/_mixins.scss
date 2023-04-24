@@ -1,3 +1,17 @@
+@mixin minmax-scaler($style, $minSz, $maxSz, $minView, $maxView) {
+    $responsive-val: calc(
+        #{$minSz}px + (#{$maxSz - $minSz}) *
+            ((100vw - #{$minView}px) / (#{$maxView - $minView}))
+    );
+    @media screen and (min-width: #{$maxView}px) {
+        #{$style}: #{$maxSz}px;
+    }
+    @media screen and (max-width: #{$minView}px) {
+        #{$style}: #{$minSz}px;
+    }
+    #{$style}: $responsive-val;
+}
+
 // $responsive là giá trị muốn muốn responsive
 // $min: là giá trị nhỏ nhất bạn mong muốn
 // $max: là giá trị lớn nhất bạn mong muốn
@@ -9,28 +23,28 @@
 
 @mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
     $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-    $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+    $dimension: if(unit($responsive) == "vh", "height", "width");
     $min-breakpoint: $min / $responsive-unitless * 100;
-  
+
     @media (max-#{$dimension}: #{$min-breakpoint}) {
-      font-size: $min;
+        font-size: $min;
     }
-  
+
     @if $max {
-      $max-breakpoint: $max / $responsive-unitless * 100;
-  
-      @media (min-#{$dimension}: #{$max-breakpoint}) {
-        font-size: $max;
-      }
+        $max-breakpoint: $max / $responsive-unitless * 100;
+
+        @media (min-#{$dimension}: #{$max-breakpoint}) {
+            font-size: $max;
+        }
     }
-  
+
     @if $fallback {
-      font-size: $fallback;
+        font-size: $fallback;
     }
-  
+
     font-size: $responsive;
 }
-  
+
 // Có container là 1600 cho pc
 @function get-vw($target) {
     $vw-context: (1600 * 0.01) * 1px;
@@ -72,7 +86,7 @@
 //
 // @param {number} $size
 // @return {length} - 引数を px -> rem に変換した値
-@function -rem($size, $base: $fz-base-px){
+@function -rem($size, $base: $fz-base-px) {
     $size: stripUnit($size);
     @return ($size / $base) * 1rem;
 }
@@ -83,24 +97,24 @@
 
 // Media queries
 // ------------------------------------------------------------
-@mixin mqMin($min){
+@mixin mqMin($min) {
     $min: stripUnit($min);
-    @media screen and (min-width: #{$min+1}px){
-      @content;
+    @media screen and (min-width: #{$min+1}px) {
+        @content;
     }
 }
-  
-@mixin mqMax($max){
+
+@mixin mqMax($max) {
     $max: stripUnit($max);
-    @media screen and (max-width: #{$max}px){
-      @content;
+    @media screen and (max-width: #{$max}px) {
+        @content;
     }
 }
-  
-@mixin mqMinMax($min, $max){
-    $min: #{stripUnit($min)+1}px;
+
+@mixin mqMinMax($min, $max) {
+    $min: #{stripUnit($min) + 1}px;
     $max: #{stripUnit($max)}px;
-    @media screen and (min-width: $min) and (max-width: $max){
-      @content;
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content;
     }
 }

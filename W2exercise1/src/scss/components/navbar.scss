@@ -102,19 +102,26 @@ $border-submenu: #d19c5d;
                     letter-spacing: -0.05rem;
                     text-align: center;
                     text-transform: uppercase;
-                    &:hover {
-                        background: url(./assets/images/bg-overlay.png)
-                            no-repeat center;
-                        color: #fff;
-                        font-weight: 500;
-                    }
                 }
+                &:hover > a {
+                    background: url(./assets/images/bg-overlay.png) no-repeat
+                        center;
+                    color: #fff;
+                    font-weight: 500;
+                }
+
                 &.submenu {
                     position: relative;
                     &:hover {
                         ul {
                             display: flex;
                             flex-direction: column;
+                            li a:hover {
+                                background: url(./assets/images/bg-overlay.png)
+                                    no-repeat center;
+                                color: #fff;
+                                font-weight: 500;
+                            }
                         }
                     }
 
@@ -123,15 +130,15 @@ $border-submenu: #d19c5d;
                         position: absolute;
                         top: 0;
                         left: 100%;
-                        li a:hover {
-                            background: url(./assets/images/bg-overlay.png)
-                                no-repeat center;
-                            color: #fff;
-                            font-weight: 500;
-                        }
                     }
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .navbar ul {
+        grid-template-columns: repeat(7, auto);
     }
 }
