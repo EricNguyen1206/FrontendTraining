@@ -13,18 +13,26 @@
             padding-right: 18px;
             color: #000;
             text-align: right;
+            font-weight: bold;
         }
 
         input {
             border: 1px solid #b6eece;
             width: 255px;
             height: 29px;
+            // box-shadow: #b6eece 0px 3px 6px, #b6eece 0px 3px 6px;
+            box-shadow: #b6eece 0px 2px 8px 0px;
         }
 
         &--warning {
             color: #ff0000;
             font-size: 12px;
             padding-left: 2px;
+            font-weight: bold;
+            display: none;
+        }
+        &--warning.active {
+            display: block;
         }
     }
 
@@ -32,6 +40,6 @@
         margin-top: 14px;
     }
     &__email {
-        margin-top: 8px;
+        margin-top: 12px;
     }
 }
